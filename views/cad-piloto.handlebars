@@ -1,0 +1,75 @@
+<form action="/add-piloto" method="POST" id="formulario" name="formulario">
+                      <div>
+                        <h1>Cadastro de Pilotos</h1>
+                        <div>
+                          <label for="nome">Nome</label>
+                        </div>
+                        <div>
+                          <input type="text" id="nome" name="nome" placeholder="Preencha o nome do piloto" pattern="[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$" maxlength="60" required>
+                        </div>
+                      </div>
+                      <br>
+                      <div>
+                        <div>
+                          <label for="equipe">Equipe</label>
+                        </div>
+                        <div>
+                          <select id="equipe" name="equipe" required>
+                            <option value=""></option>
+                            <option value="Mercedes">Mercedes</option>
+                            <option value="Red Bull Racing">Red Bull Racing</option>
+                            <option value="McLaren">McLaren</option>
+                            <option value="Racing Point">Racing Point</option>
+                            <option value="Renault">Renault</option>
+                            <option value="Ferrari">Ferrari</option>
+                            <option value="AlphaTauri">AlphaTauri</option>
+                            <option value="Alfa Romeo">Alfa Romeo</option>
+                            <option value="Haas">Haas</option>
+                            <option value="Williams">Williams</option>
+                          </select>
+                        </div>
+                      </div>
+                      <br>
+                      <div>
+                        <div>
+                            <label for="datanasc">Data de Nascimento</label>
+                        </div>
+                        <div>
+                            <input type="date" id="datanasc" name="datanasc" max={new Date().getFullYear()-18} required>
+                        </div>
+                      </div>
+                      <br>
+                      <div>
+                        <div>
+                            <label for="sexo">Sexo</label>    
+                        </div>
+                        <br>
+                        <div>  
+                            <label class="container">Masculino
+                              <input type="radio" name="sexo" value="Masculino" required>
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Feminino
+                              <input type="radio" name="sexo" value="Feminino">
+                              <span class="checkmark"></span>
+                            </label>
+                            <label class="container">Outro
+                              <input type="radio" name="sexo" value="Outro">
+                              <span class="checkmark"></span>
+                            </label>
+                        </div>
+                      </div>
+                      <br>
+                      <div>
+                        <div>
+                          <label for="ncarro">Número do carro</label>
+                        </div>
+                            <div>
+                              <input type="number" min="1" max="99" maxlength="2" id="ncarro" name="ncarro" required>
+                            </div>
+                      </div>
+                      <br>
+                      <div>
+                        <input id="botao" type="submit" value="Cadastrar" />
+                      </div>
+</form>
